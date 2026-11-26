@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f3ed">
+<title>Nedeljni plan ishrane</title>
+<style>
+:root{--bg:#f4f3ed;--paper:#fff;--ink:#202820;--muted:#6e776f;--green:#386b4b;--green2:#e7efe7;--line:#e6e8e1;--accent:#b8cfad;--shadow:0 10px 30px rgba(25,40,28,.06)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}
+button{font:inherit;cursor:pointer}.wrap{max-width:1120px;margin:auto;padding:30px 22px 60px}.top{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:28px}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:42px;height:42px;border-radius:14px;background:var(--green);display:grid;place-items:center;color:white;font-size:21px}.brand-name{font-weight:750;letter-spacing:-.03em}.brand-sub{font-size:12px;color:var(--muted)}.print{border:1px solid var(--line);background:white;border-radius:12px;padding:10px 15px;color:var(--ink);font-weight:650}.hero{background:var(--green);color:#fff;border-radius:22px;padding:30px 34px;display:flex;align-items:center;justify-content:space-between;gap:24px;box-shadow:var(--shadow)}.hero h1{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0 0 9px;letter-spacing:-.04em}.hero p{margin:0;color:#e2ede3;max-width:610px}.hero-stats{display:flex;gap:10px;flex-shrink:0}.stat{border:1px solid #ffffff35;background:#ffffff12;padding:12px 16px;border-radius:14px;min-width:100px}.stat strong{display:block;font-size:20px}.stat span{font-size:12px;color:#e2ede3}.daynav{display:flex;gap:8px;overflow-x:auto;padding:18px 0 12px;scrollbar-width:thin}.daybtn{flex:1;min-width:92px;border:1px solid var(--line);background:var(--paper);border-radius:13px;padding:10px 13px;color:var(--ink);transition:.15s}.daybtn span{display:block;font-size:12px;color:var(--muted)}.daybtn strong{font-size:14px}.daybtn.active{background:var(--green);color:white;border-color:var(--green)}.daybtn.active span{color:#dce9dd}.daybtn:hover{transform:translateY(-1px)}.dayhead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:14px 0 18px}.dayhead h2{font-size:25px;letter-spacing:-.03em;margin:0}.dayhead p{color:var(--muted);font-size:13px;margin:4px 0 0}.progress-wrap{min-width:155px}.progress-label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:5px}.progressbar{height:7px;background:#e3e7de;border-radius:9px;overflow:hidden}.progressbar i{display:block;height:100%;width:0;background:var(--green);border-radius:9px;transition:width .2s}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.meal{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.meal-img{height:180px;position:relative;background:#e5e9e1}.meal-img img{width:100%;height:100%;object-fit:cover;display:block}.meal-tag{position:absolute;left:13px;top:13px;background:#ffffffed;color:var(--green);font-size:12px;font-weight:700;border-radius:100px;padding:6px 11px}.meal-body{padding:17px 19px 18px;display:flex;flex-direction:column;flex:1}.meal-title-row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.meal h3{margin:0;font-size:19px;letter-spacing:-.02em}.meal-note{font-size:13px;color:var(--muted);margin:4px 0 12px}.ingredients{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px}.ingredients li{display:flex;gap:9px;align-items:flex-start;font-size:14px}.ingredients li:before{content:"";width:6px;height:6px;background:var(--accent);border-radius:50%;margin-top:8px;flex:0 0 6px}.donebtn{margin-top:auto;display:flex;align-items:center;gap:9px;width:100%;border:1px solid var(--line);border-radius:11px;background:#fafbf8;padding:10px 12px;color:var(--muted);font-weight:600;text-align:left}.check{width:18px;height:18px;border:1.5px solid #b7c0b4;border-radius:5px;display:grid;place-items:center;font-size:12px}.meal.done{opacity:.78}.meal.done .donebtn{border-color:#b8d0ba;background:var(--green2);color:var(--green)}.meal.done .check{background:var(--green);border-color:var(--green);color:#fff}.meal.done .check:after{content:"✓"}.footnotes{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.note{background:#e9ece4;border-radius:14px;padding:15px 17px;color:#49554a;font-size:13px}.note strong{display:block;color:var(--ink);margin-bottom:4px}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:32px}
+@media(max-width:760px){.wrap{padding:18px 14px 40px}.hero{padding:23px 20px;display:block}.hero-stats{margin-top:17px}.stat{flex:1}.top{margin-bottom:18px}.cards{grid-template-columns:1fr}.meal-img{height:200px}.dayhead{align-items:flex-start;flex-direction:column}.progress-wrap{width:100%}.daybtn{min-width:83px;padding:9px 10px}.daybtn strong{font-size:13px}.footnotes{grid-template-columns:1fr}}
+@media print{body{background:white}.wrap{max-width:none;padding:0}.top,.hero,.daynav,.progress-wrap,.donebtn,.footer{display:none!important}.dayhead{margin-top:0}.cards{grid-template-columns:1fr 1fr;gap:10px}.meal{box-shadow:none;break-inside:avoid}.meal-img{height:120px}.meal-body{padding:12px}.ingredients{gap:3px}.ingredients li{font-size:12px}.footnotes{margin-top:12px}.note{padding:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div class="brand"><div class="brand-mark">✦</div><div><div class="brand-name">Nedeljni plan ishrane</div><div class="brand-sub">Jednostavno · Uravnoteženo · Održiv ritam</div></div></div>
+ <button class="print" onclick="window.print()">⤓ Štampaj / PDF</button>
+</header>
+<section class="hero">
+ <div><h1>Plan koji radi za tebe,<br>ne obrnuto.</h1><p>7 dana praktičnih obroka sa jačim ručkom, srednjim doručkom i laganijom večerom. Rotiraj dane kako ti odgovara.</p></div>
+ <div class="hero-stats"><div class="stat"><strong>7 dana</strong><span>nedeljni raspored</span></div><div class="stat"><strong>160–180 g</strong><span>cilj proteina dnevno</span></div></div>
+</section>
+<nav class="daynav" id="daynav" aria-label="Izbor dana"></nav>
+<div class="dayhead"><div><h2 id="daytitle">Ponedeljak</h2><p id="daydesc">Dnevni meni</p></div><div class="progress-wrap"><div class="progress-label"><span>Dnevni napredak</span><span id="progresslabel">0 / 4</span></div><div class="progressbar"><i id="progressfill"></i></div></div></div>
+<section class="cards" id="mealgrid"></section>
+<section class="footnotes"><div class="note"><strong>Kako meriti namirnice</strong>Gramaze za meso, krompir, pirinač, testeninu i povrće odnose se na sirovu / suvu količinu pre kuvanja. Ulje meri pre dodavanja.</div><div class="note"><strong>Fleksibilnost je deo plana</strong>Ne moraš pratiti dane striktno. Rotiraj obroke, zameni priloge i prilagodi porcije, uz zadržavanje dobrog unosa proteina.</div></section>
+<footer class="footer">Plan ishrane · Označavanje obroka se čuva u ovom browseru na ovom uređaju.</footer>
+</div>
+<script>
+const menu=[
+{name:'Ponedeljak',meals:[
+{type:'Doručak',name:'Jaja, tost i humus',img:'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1000&q=85',items:['3 jaja','2 kriške tosta','30 g humusa','50 g ćureće šunke','Paradajz']},
+{type:'Ručak',name:'Piletina sa pirinčem i povrćem',img:'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1000&q=85',items:['220 g sirove piletine','85 g suvog pirinča','200 g mešanog povrća','10 g maslinovog ulja','Salata po želji']},
+{type:'Užina',name:'Posni sir, banana i orasi',img:'https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=1000&q=85',items:['200 g posnog sira','1 banana','15 g oraha']},
+{type:'Večera',name:'Tost sendviči',img:'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1000&q=85',items:['2 kriške tosta','60 g ćureće šunke','30 g mladog sira','Paradajz i krastavac']}]},
+{name:'Utorak',meals:[
+{type:'Doručak',name:'Tost sa jajima i avokadom',img:'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1000&q=85',items:['2 kriške tosta','2 jaja','70 g avokada','100 g posnog sira']},
+{type:'Ručak',name:'Musaka i salata',img:'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1000&q=85',items:['400–450 g musake','150 g posnog sira (ako nema dovoljno mesa)','Kupus salata','1 kriška hleba po potrebi']},
+{type:'Užina',name:'Proteinski šejk sa bananom',img:'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=1000&q=85',items:['30 g whey proteina','250 ml mleka','1 banana']},
+{type:'Večera',name:'Posni sir i povrće',img:'https://images.unsplash.com/photo-1540420773420-3366772f2b2b?auto=format&fit=crop&w=1000&q=85',items:['200 g posnog sira','1–2 pirinčane galete ili 1 kriška tosta','Krastavac i paprika']}]},
+{name:'Sreda',meals:[
+{type:'Doručak',name:'Omlet sa sirom i šunkom',img:'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1000&q=85',items:['3 jaja','30 g sira','40 g šunke','2 kriške tosta']},
+{type:'Ručak',name:'Oslić sa krompirom',img:'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1000&q=85',items:['250 g sirovog oslića','400 g sirovog, očišćenog krompira','200 g povrća ili salate','10 g maslinovog ulja','1–2 kriške hleba po želji']},
+{type:'Užina',name:'Voće, bademi i posni sir',img:'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=1000&q=85',items:['1 jabuka','25 g badema','150 g posnog sira']},
+{type:'Večera',name:'Salata sa jajima i fetom',img:'https://images.unsplash.com/photo-1540420773420-3366772f2b2b?auto=format&fit=crop&w=1000&q=85',items:['2 kuvana jaja','Zelena salata, paradajz i krastavac','30 g fete','1 kriška tosta']}]},
+{name:'Četvrtak',meals:[
+{type:'Doručak',name:'Proteinska ovsena kaša',img:'https://images.unsplash.com/photo-1517673132405-a56a62b18caf?auto=format&fit=crop&w=1000&q=85',items:['70 g ovsenih pahuljica','250 ml mleka','30 g whey proteina','1 banana','10 g putera od kikirikija']},
+{type:'Ručak',name:'Chicken burrito bowl',img:'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1000&q=85',items:['200 g sirove piletine','85 g suvog pirinča','100 g oceđenog pasulja','100 g oceđenog kukuruza','Paprika, salsa i malo sira']},
+{type:'Užina',name:'Posni sir sa jagodama',img:'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=1000&q=85',items:['200 g posnog sira','150 g jagoda','2 pirinčane galete']},
+{type:'Večera',name:'Lagani Caesar sa piletinom',img:'https://images.unsplash.com/photo-1540420773420-3366772f2b2b?auto=format&fit=crop&w=1000&q=85',items:['100 g sirove piletine','Zelena salata','15 g parmezana','Malo krutona','Malo Caesar dresinga']}]},
+{name:'Petak',meals:[
+{type:'Doručak',name:'Jaja, tost i humus',img:'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1000&q=85',items:['3 jaja','2 kriške tosta','30 g humusa','50 g pileće šunke','Paradajz']},
+{type:'Ručak',name:'Piletina i krompir iz rerne',img:'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1000&q=85',items:['220 g sirove piletine','350 g sirovog, očišćenog krompira','Povrće','10 g maslinovog ulja','Salata']},
+{type:'Užina',name:'Šejk sa bananom i kikirikijem',img:'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=1000&q=85',items:['30 g whey proteina','250 ml mleka','1 banana','10 g putera od kikirikija']},
+{type:'Večera',name:'Posni sir sa tostom',img:'https://images.unsplash.com/photo-1540420773420-3366772f2b2b?auto=format&fit=crop&w=1000&q=85',items:['150–200 g posnog sira','1–2 kriške tosta','Začini','Paprika i krastavac']}]},
+{name:'Subota',meals:[
+{type:'Doručak',name:'Pita sa sirom i paradajzom',img:'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1000&q=85',items:['200 g pite sa krompirom ili pečurkama','200 g posnog sira','Paradajz']},
+{type:'Ručak',name:'Piletina sa pirinčem i pečurkama',img:'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1000&q=85',items:['200 g sirove piletine','100 g suvog pirinča','150 g sirovih pečuraka','20 g parmezana','Malo maslinovog ulja']},
+{type:'Užina',name:'Pomorandža, orasi i posni sir',img:'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=1000&q=85',items:['1 pomorandža','20 g oraha','150 g posnog sira']},
+{type:'Večera',name:'Tost sendviči',img:'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1000&q=85',items:['2 kriške tosta','50 g šunke','25 g sira','Paradajz']}]},
+{name:'Nedelja',meals:[
+{type:'Doručak',name:'Tost sa jajima i sirom',img:'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1000&q=85',items:['3 kriške tosta','2 jaja','100 ml mleka','100 g posnog sira','Voće po izboru']},
+{type:'Ručak',name:'Nedeljni ručak po izboru',img:'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1000&q=85',items:['200 g sirovog mesa (piletina, svinjski file, junetina...)','250–300 g sirovog krompira ili prilog (pirinač/testenina se meri suvo)','Velika salata','Hleb po potrebi']},
+{type:'Užina',name:'Proteinski šejk sa bananom',img:'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=1000&q=85',items:['30 g whey proteina','250 ml mleka','1 banana']},
+{type:'Večera',name:'Posni sir i sveže povrće',img:'https://images.unsplash.com/photo-1540420773420-3366772f2b2b?auto=format&fit=crop&w=1000&q=85',items:['200 g posnog sira','1 kriška tosta','Krastavac i paradajz']}]}
+];
+let active=0;const storageKey='mealplan-checked-v1';let checked=JSON.parse(localStorage.getItem(storageKey)||'{}');
+function renderNav(){document.getElementById('daynav').innerHTML=menu.map((d,i)=>`<button class="daybtn ${i===active?'active':''}" onclick="selectDay(${i})"><span>Dan ${i+1}</span><strong>${d.name}</strong></button>`).join('')}
+function renderDay(){let d=menu[active];document.getElementById('daytitle').textContent=d.name;document.getElementById('daydesc').textContent='Dnevni meni · 4 obroka';document.getElementById('mealgrid').innerHTML=d.meals.map((m,i)=>{let id=`${active}-${i}`,done=!!checked[id];return `<article class="meal ${done?'done':''}"><div class="meal-img"><img loading="lazy" src="${m.img}" alt="${m.name}" onerror="this.style.opacity=0.15"><span class="meal-tag">${m.type}</span></div><div class="meal-body"><div class="meal-title-row"><h3>${m.name}</h3></div><p class="meal-note">Predlog obroka</p><ul class="ingredients">${m.items.map(x=>`<li>${x}</li>`).join('')}</ul><button class="donebtn" onclick="toggleDone('${id}')"><span class="check"></span><span>${done?'Obrok označen':'Označi kao pojedeno'}</span></button></div></article>`}).join('');updateProgress()}
+function selectDay(i){active=i;renderNav();renderDay()}
+function toggleDone(id){checked[id]=!checked[id];localStorage.setItem(storageKey,JSON.stringify(checked));renderDay()}
+function updateProgress(){let count=menu[active].meals.filter((_,i)=>checked[`${active}-${i}`]).length;document.getElementById('progresslabel').textContent=`${count} / 4`;document.getElementById('progressfill').style.width=`${count*25}%`}
+renderNav();renderDay();
+</script>
+</body>
+</html>
